@@ -1,7 +1,8 @@
-import { Flex, Input, Button, Stack, FormLabel, FormControl } from "@chakra-ui/react"
+import { Flex, Button, Stack} from "@chakra-ui/react"
+import { Input } from "@/components/Form/Input"
 
 export default function Home() {
-    //criando e configurando input e os botões
+    //importamos o input aqui usarmos aqui.
     return (
         <Flex
             w="100vw"
@@ -19,40 +20,8 @@ export default function Home() {
                 flexDir="column"
             >
                 <Stack spacing="8">
-                    <FormControl>
-                        <FormLabel htmlFor="email">E-mail</FormLabel>
-
-                        <Input 
-                            name="email" 
-                            type="email" 
-                            focusBorderColor="pink.500"
-                            bgColor="gray.900"
-                            variant="filled"
-                            _hover={{
-                                bgColor: "gray.900"
-                            }}
-                            size="lg"
-                        />
-                    </FormControl>
-                    
-                    <FormControl>
-                        <FormLabel htmlFor="password">Senha</FormLabel>
-
-                        <Input 
-                            name="password" 
-                            type="password"
-                            id="password"
-                            mt="2"
-                            focusBorderColor="pink.500"
-                            bgColor="gray.900"
-                            variant="filled"
-                            _hover={{
-                                bgColor: "gray.900"
-                            }}
-                            size="lg"
-                        />
-                    </FormControl>
-
+                    <Input name="email" type="email" label="E-mail" />
+                    <Input name="password" type="password" label="Senha" />        
                 </Stack>    
 
                 <Button type="submit" mt="6" colorScheme="pink">Entrar</Button>
